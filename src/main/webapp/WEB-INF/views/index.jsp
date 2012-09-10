@@ -23,6 +23,8 @@
 <script src="resources/angularjs/js/controllers.js"></script>
 <script src="resources/angularjs/js/speaker/speaker.js"></script>
 <script src="resources/angularjs/js/day/day.js"></script>
+<script src="resources/angularjs/js/admin/admin.js"></script>
+<script src="resources/angularjs/js/topic/topic.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">

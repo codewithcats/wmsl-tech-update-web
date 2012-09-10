@@ -20,10 +20,6 @@ privileged aspect Speaker_Roo_Json {
         return new JSONDeserializer<Speaker>().use(null, Speaker.class).deserialize(json);
     }
     
-    public static String Speaker.toJsonArray(Collection<Speaker> collection) {
-        return new JSONSerializer().exclude("*.class").serialize(collection);
-    }
-    
     public static Collection<Speaker> Speaker.fromJsonArrayToSpeakers(String json) {
         return new JSONDeserializer<List<Speaker>>().use(null, ArrayList.class).use("values", Speaker.class).deserialize(json);
     }

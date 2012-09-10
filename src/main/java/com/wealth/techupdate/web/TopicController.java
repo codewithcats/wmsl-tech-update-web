@@ -36,9 +36,4 @@ public class TopicController {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(json, headers, HttpStatus.CREATED);
     }
-
-    @RequestMapping
-    public String index() {
-        return "topic/index";
-    }
 }
