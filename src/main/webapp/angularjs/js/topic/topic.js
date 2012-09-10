@@ -10,6 +10,7 @@ function CreateTopicCtrl($scope, $http) {
 		$scope.topic.speakers.push($scope._speaker);
 	};
 	$scope.createTopic = function() {
+		$scope.topic.sessionDate = moment($scope._date, 'DD/MM/YYYY HH:mm').valueOf();
 		$http.put('topic', $scope.topic);
 	};
 }

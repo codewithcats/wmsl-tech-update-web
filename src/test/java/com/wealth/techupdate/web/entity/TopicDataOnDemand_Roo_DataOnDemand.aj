@@ -9,6 +9,9 @@ import com.wealth.techupdate.web.repository.TopicRepository;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -31,6 +34,7 @@ privileged aspect TopicDataOnDemand_Roo_DataOnDemand {
     public Topic TopicDataOnDemand.getNewTransientTopic(int index) {
         Topic obj = new Topic();
         setDescription(obj, index);
+        setSessionDate(obj, index);
         setTitle(obj, index);
         return obj;
     }
@@ -38,6 +42,11 @@ privileged aspect TopicDataOnDemand_Roo_DataOnDemand {
     public void TopicDataOnDemand.setDescription(Topic obj, int index) {
         String description = "description_" + index;
         obj.setDescription(description);
+    }
+    
+    public void TopicDataOnDemand.setSessionDate(Topic obj, int index) {
+        Date sessionDate = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setSessionDate(sessionDate);
     }
     
     public void TopicDataOnDemand.setTitle(Topic obj, int index) {

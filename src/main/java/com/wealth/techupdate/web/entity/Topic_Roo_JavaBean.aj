@@ -5,6 +5,7 @@ package com.wealth.techupdate.web.entity;
 
 import com.wealth.techupdate.web.entity.Speaker;
 import com.wealth.techupdate.web.entity.Topic;
+import java.util.Date;
 import java.util.List;
 
 privileged aspect Topic_Roo_JavaBean {
@@ -31,6 +32,14 @@ privileged aspect Topic_Roo_JavaBean {
     
     public void Topic.setSpeakers(List<Speaker> speakers) {
         this.speakers = speakers;
+    }
+    
+    public Date Topic.getSessionDate() {
+        return this.sessionDate;
+    }
+    
+    public void Topic.setSessionDate(Date sessionDate) {
+        this.sessionDate = sessionDate;
     }
     
 }

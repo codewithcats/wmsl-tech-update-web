@@ -25,6 +25,7 @@
 <script src="resources/angularjs/js/day/day.js"></script>
 <script src="resources/angularjs/js/admin/admin.js"></script>
 <script src="resources/angularjs/js/topic/topic.js"></script>
+<script src="resources/angularjs/lib/moment.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
