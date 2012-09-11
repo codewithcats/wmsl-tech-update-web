@@ -1,13 +1,13 @@
 package com.wealth.techupdate.web.entity;
 
-import flexjson.JSONSerializer;
-import flexjson.transformer.StringTransformer;
-
 import java.util.Collection;
+
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.layers.repository.mongo.RooMongoEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import flexjson.JSONSerializer;
 
 @RooJavaBean
 @RooToString

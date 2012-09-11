@@ -1,0 +1,29 @@
+<style type="text/css">
+	.topic {
+		margin-bottom: 10px;
+		background-color: whitesmoke;
+		padding: 10px;
+		padding-right: 0;
+	}
+	.topic .speaker-name {
+		font-weight: bold;
+		font-size: 14px;
+	}
+</style>
+<div class="span12" ng-controller="ScheduleHighlightCtrl">
+	<h2 class="page-header"><i class="icon-truck">&nbsp;</i>... Upcoming Techs</h2>
+	<div class="row" ng-repeat="t in topics">
+		<div class="span12 topic">
+			<div class="row">
+				<div class="span2" style="width: 120px;">
+					<img ng-repeat="s in t.speakers" ng-src="resources/images/profiles/{{s.profilePicPath}}" class="img-polaroid" style="width:120px;"/>
+			 	</div>
+				<div class="span9">
+					<h3 style="margin: 0;">{{t.title}}</h3>
+					<p>by <span ng-repeat="s in t.speakers" class="speaker-name">{{s.name}}</span>&nbsp;<small>{{getSessionDateLabel(t.sessionDate)}}</small></p>
+					<p class="lead">{{t.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

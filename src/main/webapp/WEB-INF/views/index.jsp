@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>WMSL Tech Update</title>
+<link rel="shortcut icon" href="resources/images/retro_p_wing.ico">
 <link rel="stylesheet" href="resources/angularjs/css/app.css">
 <link rel="stylesheet" href="resources/twitter-bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="resources/styles/font-awesome.css">
 <link rel="stylesheet" href="resources/styles/navbar.css">
 <style type="text/css">
-	body {padding-top: 40px;}
+	body {padding: 40px 0;}
 	@media(max-width: 979px) {
 		body {padding-top: 0;}
 	}
@@ -25,6 +26,7 @@
 <script src="resources/angularjs/js/day/day.js"></script>
 <script src="resources/angularjs/js/admin/admin.js"></script>
 <script src="resources/angularjs/js/topic/topic.js"></script>
+<script src="resources/angularjs/js/schedule/schedule.js"></script>
 <script src="resources/angularjs/lib/moment.min.js"></script>
 </head>
 <body>

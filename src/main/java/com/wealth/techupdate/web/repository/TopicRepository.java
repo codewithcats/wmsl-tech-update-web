@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.roo.addon.layers.repository.mongo.RooMongoRepository;
 
 @RooMongoRepository(domainType = Topic.class)
-public interface TopicRepository {
+public interface TopicRepository extends TopicRepositoryCustom {
 
     List<com.wealth.techupdate.web.entity.Topic> findAll();
+
 }
