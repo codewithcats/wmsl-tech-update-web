@@ -1,0 +1,10 @@
+<div ng-controller="UserInfoNavCtrl">
+	<form ng-hide="!!profile" action="signin/facebook" method="post">
+		<input type="submit" value="Log In with facebook" />
+	</form>
+	<div ng-show="!!profile">
+		<span>{{profile.name}}</span>&nbsp;
+		<img ng-src="{{profile.imageUrl}}"/>
+	</div>
+	
+</div>
